@@ -59,11 +59,6 @@
     </div>
     <script src="script.js"></script>
     <script>
-        const State = ["Initial", "Record", "Download"];
-        let stateIndex = 0;
-        let mediaRecorder,
-          chunks = [],
-          audioURL = "";
       
         const openModal = () => {
           const modal = document.getElementById("myModal");
@@ -79,18 +74,68 @@
         yesButton.addEventListener("click", () => {
           // Redirect to subject.html
           window.location.href = "question.html";
-      
-          // Start recording
-          record();
-      
-          // Automatically stop recording after 2 minutes
-          setTimeout(() => {
-            stopRecording();
-          }, 120000); 
         });
       
-        application(stateIndex);
+    
       </script>      
   </body>
 </html>
 
+<!-- //  var modal = document.getElementById("myModal");
+      // var yesButton = document.getElementById("yesButton");
+      // var noButton = document.getElementById("noButton");
+      // var takeTestButton = document.getElementById("takeTestButton");
+
+      // // Open modal when "Take Test" button is clicked
+      // takeTestButton.addEventListener("click", function() {
+      //     modal.style.display = "block";
+      // });
+
+      // // Close modal and handle user response
+      // yesButton.addEventListener("click", function() {
+      //     // Record audio for 2 minutes
+      //     startRecording();
+      //     // Redirect to question.html
+      //     window.location.href = "question.html";
+
+      // });
+
+      // noButton.addEventListener("click", function() {
+      //     alert("You chose not to proceed with the test.");
+      //     modal.style.display = "none";
+      // });
+
+      // // Function to start recording audio
+      // function startRecording() {
+      //     navigator.mediaDevices.getUserMedia({ audio: true })
+      //         .then(function(stream) {
+      //             var mediaRecorder = new MediaRecorder(stream);
+      //             var chunks = [];
+
+      //             mediaRecorder.ondataavailable = function(event) {
+      //                 chunks.push(event.data);
+      //             }
+
+      //             mediaRecorder.onstop = function() {
+      //                 var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+      //                 var url = window.URL.createObjectURL(blob);
+
+      //                 // Download the audio file
+      //                 var a = document.createElement('a');
+      //                 a.href = url;
+      //                 a.download = 'recorded_audio.ogg';
+      //                 document.body.appendChild(a);
+      //                 a.click();
+      //             }
+
+      //             // Start recording for 2 minutes
+      //             mediaRecorder.start();
+      //             setTimeout(function() {
+      //                 mediaRecorder.stop();
+      //             }, 120000); // 2 minutes
+      //         })
+      //         .catch(function(err) {
+      //             console.error('Error accessing microphone: ', err);
+      //             alert('Error accessing microphone. Please check permissions and try again.');
+      //         });
+      // } -->

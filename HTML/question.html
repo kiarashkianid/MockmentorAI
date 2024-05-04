@@ -3,103 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <title>MediaCapture and Streams API</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for container and audio */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #question {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        #timer {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        audio {
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    
-    <main>
-        <audio controls></audio>
-    </main>    
+    <div class="container">
+        <div id="question">What is your favorite color?</div>
+        <div id="timer">Time Left: <span id="time">2:00</span></div>
+        <audio id="audioElement" controls autoplay></audio>
+    </div>
+
     <script>
-        
         let constraintObj = { 
             audio: true, 
         }; 
-        
-        //handle older browsers that might implement getUserMedia in some way
-        if (navigator.mediaDevices === undefined) {
-            navigator.mediaDevices = {};
-            navigator.mediaDevices.getUserMedia = function(constraintObj) {
-                let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-                if (!getUserMedia) {
-                    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+
+        let timer;
+        let timeLeft = 120; // 2 minutes in seconds
+
+        window.onload = function() {
+            startRecording();
+        };
+
+        function startRecording() {
+            // Start the timer
+            startTimer();
+
+            // Get user media for recording
+            navigator.mediaDevices.getUserMedia(constraintObj)
+            .then(function(mediaStreamObj) {
+                // Connect the media stream to the audio element
+                let audio = document.getElementById('audioElement');
+                if ("srcObject" in audio) {
+                    audio.srcObject = mediaStreamObj;
+                } else {
+                    //old version
+                    audio.src = window.URL.createObjectURL(mediaStreamObj);
                 }
-                return new Promise(function(resolve, reject) {
-                    getUserMedia.call(navigator, constraintObj, resolve, reject);
-                });
-            }
-        } else {
-            navigator.mediaDevices.enumerateDevices()
-            .then(devices => {
-                devices.forEach(device=>{
-                    console.log(device.kind.toUpperCase(), device.label);
-                    //, device.deviceId
-                })
+
+                // Start recording
+                let mediaRecorder = new MediaRecorder(mediaStreamObj);
+                let chunks = [];
+                mediaRecorder.start();
+                console.log(mediaRecorder.state);
+
+                // Stop recording after 2 minutes
+                setTimeout(() => {
+                    mediaRecorder.stop();
+                    console.log(mediaRecorder.state);
+                    submitAnswer();
+                }, 120000); // 2 minutes in milliseconds
+                
+                mediaRecorder.ondataavailable = function(ev) {
+                    chunks.push(ev.data);
+                }
+                mediaRecorder.onstop = (ev)=>{
+                    let blob = new Blob(chunks, { 'type' : 'audio/wav;' });
+                    chunks = [];
+                    
+                    // Save the recorded audio to localStorage
+                    localStorage.setItem('recordedAudio', blob);
+                }
             })
-            .catch(err=>{
+            .catch(function(err) { 
                 console.log(err.name, err.message);
             })
         }
-        
-        navigator.mediaDevices.getUserMedia(constraintObj)
-        .then(function(mediaStreamObj) {
-            // Connect the media stream to the audio element
-            let audio = document.querySelector('audio');
-            if ("srcObject" in audio) {
-                audio.srcObject = mediaStreamObj;
-            } else {
-                //old version
-                audio.src = window.URL.createObjectURL(mediaStreamObj);
-            }
 
-            audio.onloadedmetadata = function(ev) {
-                // Show in the audio element what is being captured by the microphone
-                audio.play();
-            };
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                if (timeLeft >= 0) {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    document.getElementById("time").innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                } else {
+                    clearInterval(timer);
+                    document.getElementById("time").innerText = "Time's up!";
+                    submitAnswer();
+                }
+            }, 1000);
+        }
 
-            // Start recording automatically when the page loads
-            let mediaRecorder = new MediaRecorder(mediaStreamObj);
-            let chunks = [];
-            mediaRecorder.start();
-            console.log(mediaRecorder.state);
-
-            // Stop recording after 2 minutes
-            setTimeout(() => {
-                mediaRecorder.stop();
-                console.log(mediaRecorder.state);
-            }, 1200); // 2 minutes in milliseconds
-            
-            mediaRecorder.ondataavailable = function(ev) {
-                chunks.push(ev.data);
-            }
-            mediaRecorder.onstop = (ev)=>{
-                let blob = new Blob(chunks, { 'type' : 'audio/wav;' });
-                chunks = [];
-                
-                // Send the recorded audio file to the server
-                let formData = new FormData();
-                formData.append('audio', blob, 'recorded-audio.wav');
-                
-                fetch('http://127.0.0.1:3000/GDSCHacksProject/HTML/result.html', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (response.ok) {
-                        console.log('Audio file uploaded successfully');
-                    } else {
-                        console.error('Failed to upload audio file');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            }
-        })
-        .catch(function(err) { 
-            console.log(err.name, err.message);
-        })
+        function submitAnswer() {
+            clearInterval(timer); // Stop the timer
+            const recordedAudio = localStorage.getItem('recordedAudio');
+            // Here you can send the recorded audio to the server or handle it as needed
+            console.log(recordedAudio); // Output the recorded audio blob
+        }
     </script>
 </body>
 </html>

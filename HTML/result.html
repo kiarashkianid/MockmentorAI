@@ -6,6 +6,16 @@
     <title>Test Result</title>
 </head>
 <body>
-
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const passed = urlParams.get('passed');
+            if (passed === 'true') {
+                alert("You passed");
+            } else {
+                alert("You failed");
+            }
+        };
+    </script>
 </body>
 </html>

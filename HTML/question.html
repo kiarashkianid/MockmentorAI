@@ -2,104 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MediaCapture and Streams API</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestURTutor: Select your subjects</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <main>
-        <audio controls></audio>
-    </main>    
+    <div class="subjects-container">
+        <div class="subject-intro">
+            Select the subjects you would like to test yourself for?
+        </div>
+        <div class="subject">
+            <input type="checkbox" id="Maths" name="tabs" checked />
+            <label for="Maths">Maths</label>
+        </div>
+        <div class="subject">
+            <input type="checkbox" id="Science" name="tabs" />
+            <label for="Science">Science</label>
+        </div>
+        <div class="subject">
+            <input type="checkbox" id="Physics" name="tabs" />
+            <label for="Physics">Physics</label>
+        </div>
+        <div class="subject">
+            <input type="checkbox" id="Biology" name="tabs" />
+            <label for="Biology">Biology</label>
+        </div>
+        <div class="subject">
+            <input type="checkbox" id="Chemistry" name="tabs" />
+            <label for="Chemistry">Chemistry</label>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <input type="button" value="Take Test" class="btn TakeTestBtn" id="takeTestButton" />
+    </div>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>
+                You will get 2 minutes to answer the question. The timer will start as
+                soon as you click 'yes'. Would you like to proceed with the test?
+            </p>
+            <div class="modal-buttons">
+                <button id="yesButton">Yes</button>
+                <button id="noButton">No</button>
+            </div>
+        </div>
+    </div>
+    
     <script>
-        
-        let constraintObj = { 
-            audio: true, 
-        }; 
-        
-        //handle older browsers that might implement getUserMedia in some way
-        if (navigator.mediaDevices === undefined) {
-            navigator.mediaDevices = {};
-            navigator.mediaDevices.getUserMedia = function(constraintObj) {
-                let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-                if (!getUserMedia) {
-                    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-                }
-                return new Promise(function(resolve, reject) {
-                    getUserMedia.call(navigator, constraintObj, resolve, reject);
-                });
-            }
-        } else {
-            navigator.mediaDevices.enumerateDevices()
-            .then(devices => {
-                devices.forEach(device=>{
-                    console.log(device.kind.toUpperCase(), device.label);
-                    //, device.deviceId
-                })
-            })
-            .catch(err=>{
-                console.log(err.name, err.message);
-            })
-        }
-        
-        navigator.mediaDevices.getUserMedia(constraintObj)
-        .then(function(mediaStreamObj) {
-            // Connect the media stream to the audio element
-            let audio = document.querySelector('audio');
-            if ("srcObject" in audio) {
-                audio.srcObject = mediaStreamObj;
-            } else {
-                //old version
-                audio.src = window.URL.createObjectURL(mediaStreamObj);
-            }
+        const openModal = () => {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        };
 
-            audio.onloadedmetadata = function(ev) {
-                // Show in the audio element what is being captured by the microphone
-                audio.play();
+        const takeTestButton = document.getElementById("takeTestButton");
+        takeTestButton.addEventListener("click", () => {
+            // Gather the selected subjects
+            const selectedSubjects = [];
+            const subjectCheckboxes = document.querySelectorAll('.subject input[type="checkbox"]');
+            subjectCheckboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    selectedSubjects.push(checkbox.id);
+                }
+            });
+
+            // Create a JSON object containing the selected subjects
+            const data = {
+                subjects: selectedSubjects,
             };
 
-            // Start recording automatically when the page loads
-            let mediaRecorder = new MediaRecorder(mediaStreamObj);
-            let chunks = [];
-            mediaRecorder.start();
-            console.log(mediaRecorder.state);
+            // Send the JSON object to the backend server
+            fetch("http://your-backend-server.com/endpoint", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+            .then((response) => {
+                if (response.ok) {
+                    console.log("Subjects sent successfully");
+                    
+                } else {
+                    console.error("Failed to send subjects");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+        });
+        // Event listener for "Yes" button in modal
+        const yesButton = document.getElementById("yesButton");
+        yesButton.addEventListener("click", () => {
+            // Redirect to question.html
+            window.location.href = "question.html";
+        });
 
-            // Stop recording after 2 minutes
-            setTimeout(() => {
-                mediaRecorder.stop();
-                console.log(mediaRecorder.state);
-            }, 1200); // 2 minutes in milliseconds
-            
-            mediaRecorder.ondataavailable = function(ev) {
-                chunks.push(ev.data);
-            }
-            mediaRecorder.onstop = (ev)=>{
-                let blob = new Blob(chunks, { 'type' : 'audio/wav;' });
-                chunks = [];
-                
-                // Send the recorded audio file to the server
-                let formData = new FormData();
-                formData.append('audio', blob, 'recorded-audio.wav');
-                
-                fetch('http://127.0.0.1:3000/GDSCHacksProject/HTML/result.html', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (response.ok) {
-                        console.log('Audio file uploaded successfully');
-                    } else {
-                        console.error('Failed to upload audio file');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            }
-        })
-        .catch(function(err) { 
-            console.log(err.name, err.message);
-        })
+        // Event listener for "No" button in modal
+        const noButton = document.getElementById("noButton");
+        noButton.addEventListener("click", () => {
+            // Redirect to subject.html
+            window.location.href = "subject.html";
+        });
     </script>
+    
 </body>
 </html>

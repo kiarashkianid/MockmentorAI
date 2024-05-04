@@ -100,6 +100,13 @@
         .catch(function(err) { 
             console.log(err.name, err.message);
         })
+
+        function submitAnswer(passed) {
+            clearInterval(timer); // Stop the timer
+            // Redirect to the result page with the result parameter
+            const resultURL = `result.html?passed=${passed}`;
+            window.location.href = resultURL;
+        }
     </script>
     
 </body>

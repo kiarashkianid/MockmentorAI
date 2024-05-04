@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TestURTutor</title>
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      :root {
+        --bg-color: #191f36;
+        --snd-bg-color: #262b40;
+        --text-color: #fff;
+        --main-color: #59b2f4;
+      }
+      body{
+        background-image: url("education.jpg");
+        background-size: 175%;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0;
+        background: var(--bg-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        color: var(--text-color);
+        font-weight: 700;
+        cursor: default;
+        text-decoration: none;
+      }
+      #profile-icon {
+        font-size: 2.5rem;
+        color: var(--text-color);
+      }
+      section {
+        position: relative;
+      }
+
+      .intro {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("https://tse3.explicit.bing.net/th?id=OIP.54aDRJHlX7jC15ANjLWg-QHaEo&pid=Api&P=0&h=180");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 60vw;
+        height: 40vh;
+      }
+
+      .intro-content{
+        font-size: 34px;
+        justify-content: right;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="#" class="logo">TestURTutor</a>
+        <a href="profile.html" class="user-profile">
+          <i class="fa-solid fa-user" id="profile-icon"></i
+        ></a>
+      </div>
+      
+    </header>
+    <main>
+      <div class="intro"><div class="intro-content">Welcome to TestURTutor. We provide the best platform to test the abilities of a Tutor. Take our interactive knowledge test in your selected areas of expertise. </div></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

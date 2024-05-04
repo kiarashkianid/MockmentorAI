@@ -6,6 +6,28 @@
     <title>Test Result</title>
 </head>
 <body>
+<<<<<<< HEAD
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const passed = urlParams.get('passed');
+            if (passed === 'true') {
+                alert("You passed");
+            } else {
+                alert("You failed");
+            }
+            
+            // Simulate score calculation (for demonstration purposes)
+            const score = Math.random() * 100; // Random score between 0 and 100
+            const passPercentage = 60;
+            
+            // Check if the score is above the pass percentage
+            const result = score >= passPercentage ? "Pass" : "Fail";
+            const message = `Your score: ${score.toFixed(2)}%\nResult: ${result}`;
+            alert(message);
+        };
+    </script>
+=======
     <script>
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -17,5 +39,6 @@
             }
         };
     </script>
+>>>>>>> d9eded248f3e3a73e3e5e9f09a21ff3ca5482ebf
 </body>
 </html>

@@ -14,5 +14,31 @@
                 <button id="submitBtn" onclick="submitAnswer()" disabled>Submit</button>
             </div>
         </div>
+
+        <script>
+
+        let timer;
+        let timeLeft = 120; // 2 minutes in seconds
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                if (timeLeft >= 0) {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    document.getElementById("time").innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                } else {
+                    clearInterval(timer);
+                    document.getElementById("time").innerText = "Time's up!";
+                    document.getElementById("getQuestionBtn").disabled = true;
+                    document.getElementById("submitBtn").disabled = true;
+                }
+            }, 1000);
+        }
+        
+        </script>
+
+        
+
 </head>
 </html>

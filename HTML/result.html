@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Result</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const passed = urlParams.get('passed');
+            if (passed === 'true') {
+                alert("You passed");
+            } else {
+                alert("You failed");
+            }
+            
+            // Simulate score calculation (for demonstration purposes)
+            const score = Math.random() * 100; // Random score between 0 and 100
+            const passPercentage = 60;
+            
+            // Check if the score is above the pass percentage
+            const result = score >= passPercentage ? "Pass" : "Fail";
+            const message = `Your score: ${score.toFixed(2)}%\nResult: ${result}`;
+            alert(message);
+        };
+    </script>
+</body>
+</html>

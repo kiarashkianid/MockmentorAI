@@ -4,18 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrustURTutor Test</title>
-    <body>
-        <div class="container">
-            <h1>TrustURTutor Test</h1>
-            <div id="question">Click the button to get a question</div>
-            <div id="timer">Time remaining: <span id="time">2:00</span></div>
-            <div id="buttons">
-                <button id="getQuestionBtn" onclick="getRandomQuestion()">Get Question</button>
-                <button id="submitBtn" onclick="submitAnswer()" disabled>Submit</button>
-            </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #question {
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        #timer {
+            font-size: 20px;
+        }
+        #buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TrustURTutor Test</h1>
+        <div id="question">Do you want to see a random question?</div>
+        <div id="confirmation">
+            <button onclick="showQuestion()">Yes</button>
+            <button onclick="cancel()">No</button>
         </div>
+        <div id="timer" class="hidden">Time remaining: <span id="time">2:00</span></div>
+        <div id="buttons" class="hidden">
+            <button id="audioBtn">Audio</button>
+            <button id="submitBtn" onclick="submitAnswer()">Submit</button>
+        </div>
+    </div>
 
-        <script>
+    <script>
+        const mathQuestions = [
+            "What is the value of pi (π)?",
+            "What is the Pythagorean theorem?",
+            "Solve for x: 2x + 5 = 17"//testing
+        ];
+
+        const physicsQuestions = [
+            "What is Newton's first law of motion?",
+            "What is the formula for force (F)?",
+            "What is the unit of measurement for electric charge?"//testing
+        ];
 
         let timer;
         let timeLeft = 120; // 2 minutes in seconds
@@ -30,15 +81,40 @@
                 } else {
                     clearInterval(timer);
                     document.getElementById("time").innerText = "Time's up!";
-                    document.getElementById("getQuestionBtn").disabled = true;
+                    document.getElementById("audioBtn").disabled = true;
                     document.getElementById("submitBtn").disabled = true;
                 }
             }, 1000);
         }
-        
-        </script>
 
-        
+        function showQuestion() {
+            document.getElementById("confirmation").classList.add("hidden");
+            document.getElementById("timer").classList.remove("hidden");
+            document.getElementById("buttons").classList.remove("hidden");
+            startTimer();
+            const topics = ["Math", "Physics"];
+            const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+            let question;
+            if (randomTopic === "Math") {
+                question = mathQuestions[Math.floor(Math.random() * mathQuestions.length)];
+            } else if (randomTopic === "Physics") {
+                question = physicsQuestions[Math.floor(Math.random() * physicsQuestions.length)];
+            }
+            document.getElementById("question").innerText = question;
+        }
 
-</head>
+        function cancel() {
+            document.getElementById("confirmation").classList.add("hidden");
+            document.getElementById("question").innerText = "You chose not to see the question.";
+        }
+
+        function submitAnswer() {
+            clearInterval(timer); // Stop the timer
+            document.getElementById("submitBtn").disabled = true; // Disable the submit button
+            alert("Your answer has been submitted.");
+        }
+    </script>
+</body>
 </html>
+
+

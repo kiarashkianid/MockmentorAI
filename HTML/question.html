@@ -34,7 +34,6 @@
             .then(devices => {
                 devices.forEach(device=>{
                     console.log(device.kind.toUpperCase(), device.label);
-                    //, device.deviceId
                 })
             })
             .catch(err=>{

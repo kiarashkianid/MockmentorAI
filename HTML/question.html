@@ -33,7 +33,6 @@
             .then(devices => {
                 devices.forEach(device=>{
                     console.log(device.kind.toUpperCase(), device.label);
-                    //, device.deviceId
                 })
             })
             .catch(err=>{
@@ -99,6 +98,14 @@
         .catch(function(err) { 
             console.log(err.name, err.message);
         })
+
+        function submitAnswer() {
+            clearInterval(timer); // Stop the timer
+            // Determine if the user passed or not and pass the result to the result page
+            const passed = true; // For demonstration purposes, assume the user always passes
+            const resultURL = `result.html?passed=${passed}`;
+            window.location.href = resultURL;
+        }
     </script>
     
 </body>

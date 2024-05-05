@@ -17,7 +17,6 @@
             audio: true, 
         }; 
         
-        //handle older browsers that might implement getUserMedia in some way
         if (navigator.mediaDevices === undefined) {
             navigator.mediaDevices = {};
             navigator.mediaDevices.getUserMedia = function(constraintObj) {

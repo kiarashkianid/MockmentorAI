@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        TestURTutor
-    </title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustURTutor</title>
+  <style>
+    /* CSS styles for the login page */
+    body {
+      background-color: #f0f0f0; /* Light gray background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif; /* Change font for better readability */
+    }
+    .login-container {
+      width: 300px; /* Customize login form width */
+      padding: 20px;
+      background-color: #007bff; /* Blue background */
+      border-radius: 10px; /* Customize login form border radius */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Enhanced box shadow */
+      color: #fff; /* White text color */
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px; /* Add some space below the heading */
+    }
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: calc(100% - 20px); /* Customize login form fields’ width */
+      margin-bottom: 15px; /* Adjust spacing */
+      padding: 12px; /* Larger padding for better touch experience */
+      border: none;
+      border-radius: 5px; /* Rounded corners */
+      background-color: #fff; /* White background */
+      color: #333; /* Dark text color */
+    }
+    .login-form button[type="submit"] {
+      width: 100%; /* Full width */
+      padding: 12px;
+      background-color: #ffcc00; /* Yellow button background */
+      border: none;
+      border-radius: 5px;
+      color: #333; /* Dark text color */
+      cursor: pointer;
+      transition: background-color 0.3s; /* Smooth transition */
+    }
+    .login-form button[type="submit"]:hover {
+      background-color: #ffdb4d; /* Lighter yellow on hover */
+    }
+    .login-form .links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 0.8em; /* Smaller font size */
+    }
+    .login-form a {
+      color: #ffcc00; /* Yellow link color */
+      text-decoration: none;
+    }
+    .login-form a:hover {
+      color: #fff; /* White on hover */
+    }
+  </style>
 </head>
 <body>
   <div class="login-container">
@@ -14,11 +72,13 @@
     <form class="login-form" action="#" method="post">
       <input type="text" name="username" placeholder="Username" required>
       <input type="password" name="password" placeholder="Password" required>
+      <div class="links">
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> <a href="#">Remember me</a>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
       <button type="submit">Submit</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-      <p><a href="#">Forgot password?</a></p>
     </form>
   </div>
 </body>

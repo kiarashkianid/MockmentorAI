@@ -4,7 +4,7 @@ import okhttp3.*;
 import java.io.IOException;
 public class OpenAICompletionAPI {
 
-    static final String API_KEY = "sk-proj-91kMBqd5vdNtVkZZXbjrT3BlbkFJCatPW6b2TrxbPVlgNQIe";
+    static final String API_KEY = "apiKey";
     static final String API_URL = "https://api.openai.com/v1/chat/completions";
 
     public  static String getCompletion(String prompt) {

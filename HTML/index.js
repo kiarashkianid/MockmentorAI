@@ -1,10 +1,10 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+document.getElementById("loginForm").addEventListener("submit", function() {
+    
 
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
 
-    document.getElementById("loginMessage").innerText = `Logging in with username: ${username} and password: ${password}`;
+    // document.getElementById("loginMessage").innerText = `Logging in with username: ${username} and password: ${password}`;
 
     console.log(`*** Saved information ***`);
     console.log(`==========================`);
@@ -13,8 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     console.log(`==========================`);
 });
 
-document.getElementById("registerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+document.getElementById("registerForm").addEventListener("submit", function() { 
 
     const username = document.getElementById("registerUsername").value;
     const password = document.getElementById("registerPassword").value;

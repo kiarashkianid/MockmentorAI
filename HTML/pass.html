@@ -3,28 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Result</title>
+    <title>Test Result - Passed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #009900;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const passed = urlParams.get('passed');
-            if (passed === 'true') {
-                alert("You passed");
-            } else {
-                alert("You failed");
-            }
-            
-            // Simulate score calculation (for demonstration purposes)
-            const score = Math.random() * 100; // Random score between 0 and 100
-            const passPercentage = 60;
-            
-            // Check if the score is above the pass percentage
-            const result = score >= passPercentage ? "Pass" : "Fail";
-            const message = `Your score: ${score.toFixed(2)}%\nResult: ${result}`;
-            alert(message);
-        };
-    </script>
+    <h1>Congratulations, You Passed!</h1>
 </body>
 </html>

@@ -3,7 +3,10 @@
 
 
 # Tutor Authenticator App
-<img width="960" alt="API-Test-Call" src="https://github.com/kiarashkianid/Weather-Wanderer/assets/144408744/bc8d3e0d-86d2-4bae-8e56-8cbeff28fcc6">
+<img width="960" alt="API-Test-Call" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/1.png">
+<img width="960" alt="API-Test-Call" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/2.png">
+<img width="960" alt="API-Test-Call" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/3.png">
+
 
 The Tutor Authenticator App is a platform designed to authenticate tutors' ability to teach their specific subjects, ensuring reliable and effective tutoring services. It includes assessments tailored to each subject and integrates ChatGPT and Voice Recognition APIs for accurate evaluations.
 

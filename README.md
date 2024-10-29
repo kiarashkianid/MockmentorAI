@@ -22,5 +22,5 @@ The Tutor Authenticator App is a platform designed to authenticate tutors' abili
 4. Run the app using `npm start`.
 
 ## Technologies Used : 
-HTML,CSS,JAVA,Js
+HTML,CSS,Java,JS
 

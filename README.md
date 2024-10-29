@@ -1,4 +1,7 @@
 
+
+
+
 # Tutor Authenticator App
 
 The Tutor Authenticator App is a platform designed to authenticate tutors' ability to teach their specific subjects, ensuring reliable and effective tutoring services. It includes assessments tailored to each subject and integrates ChatGPT and Voice Recognition APIs for accurate evaluations.
@@ -19,5 +22,5 @@ The Tutor Authenticator App is a platform designed to authenticate tutors' abili
 4. Run the app using `npm start`.
 
 ## Technologies Used : 
-
+HTML,CSS,JAVA,Js
 

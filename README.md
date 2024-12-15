@@ -1,28 +1,36 @@
+# 📚 Tutor Authenticator App
 
+<p align="center">
+  <img width="320" alt="Screenshot 1" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/1.png">
+  <img width="320" alt="Screenshot 2" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/2.png">
+  <img width="320" alt="Screenshot 3" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/3.png">
+</p>
 
+---
 
+The **Tutor Authenticator App** is a platform designed to authenticate tutors' expertise in specific subjects, ensuring trustworthy and effective tutoring services. With its robust features and seamless integration of AI tools, the app provides accurate and reliable assessments for tutors and administrators alike.
 
-# Tutor Authenticator App
-<img width="320" alt="API-Test-Call" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/1.png">            <img width="320" alt="API-Test-Call" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/2.png">            <img width="320" alt="API-Test-Call" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/3.png">
+---
 
+## ✨ Key Features
 
-The Tutor Authenticator App is a platform designed to authenticate tutors' ability to teach their specific subjects, ensuring reliable and effective tutoring services. It includes assessments tailored to each subject and integrates ChatGPT and Voice Recognition APIs for accurate evaluations.
+- **🎓 Subject-Specific Authentication**  
+  Evaluate and authenticate tutors' abilities for teaching particular subjects.  
 
-## Key Features
+- **⚙️ AI-Powered Assessments**  
+  Leverage the **ChatGPT API** and **Voice Recognition API** for interactive and precise assessments.  
 
-- **Subject-Specific Authentication:** Authenticate tutors based on their ability to teach specific subjects.
-- **Assessment Tools:** Utilize ChatGPT API and Voice Recognition API for assessments.
-- **User Authentication:** Secure user authentication using JWT tokens.
-- **Admin Dashboard:** Monitor and manage user accounts and assessments.
-- **Technology Stack:** Built with Node.js, Express.js, React.js, MongoDB, and integrated with ChatGPT and Voice Recognition APIs.
+- **🛠️ Technology Stack**  
+  Built using a modern tech stack:
+  - **Java** for the backend.
+  - **HTML,CSS,JS** for the frontend.
+  - Integrated with **ChatGPT** and **Voice Recognition APIs** for advanced functionality.
 
-## Getting Started
+---
 
-1. Clone the repository.
-2. Install dependencies using `npm install`.
-3. Set up environment variables (e.g., API keys).
-4. Run the app using `npm start`.
+## 🚀 Getting Started
 
-## Technologies Used : 
-HTML,CSS,Java,JS
-
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/kiarashkianid/MockMentorAI.git
+cd MockMentorAI

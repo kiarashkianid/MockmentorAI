@@ -1,12 +1,5 @@
 # 📚 Tutor Authenticator App
 
-<p align="center">
-  <img width="320" alt="Screenshot 1" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/1.png">
-  <img width="320" alt="Screenshot 2" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/2.png">
-  <img width="320" alt="Screenshot 3" src="https://github.com/kiarashkianid/MockMentorAI/blob/master/3.png">
-</p>
-
----
 
 The **Tutor Authenticator App** is a platform designed to authenticate tutors' expertise in specific subjects, ensuring trustworthy and effective tutoring services. With its robust features and seamless integration of AI tools, the app provides accurate and reliable assessments for tutors and administrators alike.
 

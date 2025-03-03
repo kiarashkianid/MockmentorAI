@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title class="title">Tutoor Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 100%;
+            padding: 40px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 2%;
+            margin-right: 30%;
+            margin-left: -35%;
+        }
+        title{
+            margin-left: 550px;
+        }
+        #question {
+            margin-top: 10px;
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        #timer {
+            padding:20px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            margin-left: 50px;
+        }
+        #buttons {
+            margin-top: 20px;
+        }
+        button {
+            color:none;
+            background-color: rgba(240, 248, 255, 0.462);
+            border: none;
+            margin-left: 25px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50px;
+            width:100px;
+        }
+        button:hover{
+            color:white;
+            font-size: larger;
+            background-color: black;
+        }
+        .hidden {
+            display: none;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; 
+            opacity: 0.3;
+        }
+
+        /* Rectangular box below header */
+        .header-box {
+            background: linear-gradient(135deg, #4ac6ff, #ff6a5b);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 1.7rem;
+            font-weight: bold;
+            display: flex;
+            text-align: top; /* Center the text */
+            margin-top: -40%;
+            margin-bottom: 5%;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <h1>
+            AI - THE FUTURE IS LISTENING...
+        </h1>
+    </div>
+    <div class="container">
+        <h1>Tutoor Assesment</h1>
+        <div id="question">Do you want to see a random question?</div><br>
+        <div id="confirmation">
+            <button onclick="showQuestion()">Yes</button>
+            <button onclick="cancel()">No</button>
+        </div>
+        <div id="timer" class="hidden">Time remaining: <span id="time">2:00</span></div>
+        <div id="buttons" class="hidden">
+            <button id="audioBtn">Audio</button>
+            <button id="submitBtn" onclick="submitAnswer()">Submit</button>
+        </div>
+    </div>
+
+    <video src="./Videos/1 Hour of White Wave Pattern _ QuietQuests.mp4" autoplay muted loop></video>
+</body>
+</html>
+
+
+    <script>
+        const mathQuestions = [
+            "Q. What is the value of pi (π)?",
+            "Q. What is the Pythagorean theorem?",
+            "Q. Solve for x: 2x + 5 = 17"//testing
+        ];
+
+        const physicsQuestions = [
+            "Q. What is Newton's first law of motion?",
+            "Q. What is the formula for force (F)?",
+            "Q. What is the unit of measurement for electric charge?"//testing
+        ];
+
+        let timer;
+        let timeLeft = 120; // 2 minutes in seconds
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                if (timeLeft >= 0) {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    document.getElementById("time").innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                } else {
+                    clearInterval(timer);
+                    document.getElementById("time").innerText = "Time's up!";
+                    document.getElementById("audioBtn").disabled = true;
+                    document.getElementById("submitBtn").disabled = true;
+                }
+            }, 1000);
+        }
+
+        function showQuestion() {
+            document.getElementById("confirmation").classList.add("hidden");
+            document.getElementById("timer").classList.remove("hidden");
+            document.getElementById("buttons").classList.remove("hidden");
+            startTimer();
+            const topics = ["Math", "Physics"];
+            const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+            let question;
+            if (randomTopic === "Math") {
+                question = mathQuestions[Math.floor(Math.random() * mathQuestions.length)];
+            } else if (randomTopic === "Physics") {
+                question = physicsQuestions[Math.floor(Math.random() * physicsQuestions.length)];
+            }
+            document.getElementById("question").innerText = question;
+        }
+
+        function cancel() {
+            document.getElementById("confirmation").classList.add("hidden");
+            document.getElementById("question").innerText = "You chose not to see the question.";
+        }
+
+        function submitAnswer() {
+            clearInterval(timer); // Stop the timer
+            document.getElementById("submitBtn").disabled = true; // Disable the submit button
+            alert("Your answer has been submitted.");
+        }
+    </script>
+</body>
+</html>
+
+

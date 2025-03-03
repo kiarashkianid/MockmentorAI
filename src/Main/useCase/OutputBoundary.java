@@ -1,6 +1,6 @@
 package useCase;
 
 public interface OutputBoundary {
-    void prepareSuccessView(OutputData outputData);
+    void prepareSuccessView(null);
     void prepareFailView(String error);
 }

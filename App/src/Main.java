@@ -1,6 +1,6 @@
-package src;
+package App;
 
-import api,entities,InterfaceAdapters,useCase
+from App import api,entities,InterfaceAdapters,useCase
 
 //connect this to view somehow , from view, you dont need much just a inmemory user to initialize , so maybe finish the
 // js part of the project to the point that you get a inmemory useer ,then at the end call back the js part from here

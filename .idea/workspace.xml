@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="205d218a-b27d-45b5-89e0-095e59d2dde7" name="Changes" comment="project structure">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/GDSC Hacks Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/InterfaceAdapters/AuthController.Java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/InterfaceAdapters/AuthController.Java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/InterfaceAdapters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/InterfaceAdapters/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/InterfaceAdapters/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/InterfaceAdapters/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/api/OpenAICompletionAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/api/OpenAICompletionAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/api/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/api/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/api/VoiceToText.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/api/VoiceToText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/api/my-service-account-key.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/api/my-service-account-key.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/entities/Assessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/entities/Assessment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/entities/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/entities/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/useCase/InputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/useCase/InputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/useCase/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/useCase/InputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/useCase/Interactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/useCase/Interactor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/back/Main/useCase/OutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/back/useCase/OutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/front/fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/front/fail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/front/pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/front/pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/front/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/front/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/front/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/front/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/front/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/front/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/front/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/front/subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/front/subject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MockMentorAI.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kiarashkianid&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kiarashkianid/MockMentorAI&quot;,
+    &quot;accountId&quot;: &quot;960a05e2-407d-4760-aa90-66c9ad3f4a09&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2tmxy7lddAzw22K46GxkuAzrkwT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.pass.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.question.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.subject.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kiara\IdeaProjects\MockMentorAI\App\src\back" />
+      <recent name="C:\Users\kiara\IdeaProjects\MockMentorAI\App\src\back\" />
+      <recent name="C:\Users\kiara\IdeaProjects\MockMentorAI\App\src" />
+      <recent name="C:\Users\kiara\IdeaProjects\MockMentorAI\App" />
+      <recent name="C:\Users\kiara\IdeaProjects\MockMentorAI\.idea\App" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.pass.html">
+    <configuration name="pass.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MockMentorAI/App/src/front/pass.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="question.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MockMentorAI/App/src/front/question.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MockMentorAI/App/src/front/register.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="subject.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MockMentorAI/App/src/front/subject.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.pass.html" />
+        <item itemvalue="JavaScript Debug.subject.html" />
+        <item itemvalue="JavaScript Debug.question.html" />
+        <item itemvalue="JavaScript Debug.register.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="project structure">
+      <option name="closed" value="true" />
+      <created>1740971134286</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740971134286</updated>
+    </task>
+    <task id="LOCAL-00002" summary="project structure">
+      <option name="closed" value="true" />
+      <created>1740971177726</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740971177726</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="205d218a-b27d-45b5-89e0-095e59d2dde7" name="Changes" comment="project structure" />
+      <created>1740971305080</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740971305080</updated>
+      <workItem from="1740971307501" duration="112000" />
+      <workItem from="1740971532353" duration="25000" />
+      <workItem from="1740971697621" duration="924000" />
+      <workItem from="1741190578911" duration="7000" />
+      <workItem from="1741195768870" duration="2000" />
+      <workItem from="1741704808534" duration="487000" />
+      <workItem from="1741711188271" duration="309000" />
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="backend" />
+    <MESSAGE value="project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="project structure" />
+  </component>
+</project>

@@ -9,12 +9,18 @@
 <body>
 <div class="container">
   <h1>Tutoor Assessment</h1>
-  <div id="question">Do you want to see a random question?</div><br>
-  <div id="confirmation">
+
+  <div id="question">Loading question...</div><br>
+
+  <div id="confirmation" class="hidden">
     <button onclick="showQuestion()">Yes</button>
     <button onclick="cancel()">No</button>
   </div>
-  <div id="timer" class="hidden">Time remaining: <span id="time">2:00</span></div>
+
+  <div id="timer" class="hidden">
+    ⏳ Time remaining: <span id="time">2:00</span>
+  </div>
+
   <div id="buttons" class="hidden">
     <button id="audioBtn">Audio</button>
     <button id="submitBtn" onclick="submitAnswer()">Submit</button>

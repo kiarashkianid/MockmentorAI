@@ -8,21 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2da7ccf-2c2b-430b-8e24-523b25500845" name="Changes" comment="changed structure">
-      <change afterPath="$PROJECT_DIR$/pages/fail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/pass.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/question.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/subject.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/a.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/fail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/pass.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/question.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/subject.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/subject.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -72,12 +65,18 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.question.html.executor": "Run",
+    "JavaScript Debug.subject.html.executor": "Run",
+    "Node.js.app.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "C:/Users/kiara/AppData/Roaming/JetBrains/IntelliJIdea2024.3/node/versions/22.14.0/node",
     "nodejs_package_manager_path": "npm",
@@ -94,17 +93,25 @@
       <recent name="C:\Users\kiara\IdeaProjects\MockMentorAI\pages" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.question.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MockMentorAI/pages/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="question.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MockMentorAI/pages/question.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="subject.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MockMentorAI/pages/subject.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/app.js" working-dir="$PROJECT_DIR$/js">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.question.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.subject.html" />
+        <item itemvalue="JavaScript Debug.question.html" />
+        <item itemvalue="Node.js.app.js" />
       </list>
     </recent_temporary>
   </component>
@@ -133,9 +140,18 @@
       <option name="presentableId" value="Default" />
       <updated>1741794095919</updated>
       <workItem from="1741794097305" duration="1236000" />
-      <workItem from="1741887392547" duration="950000" />
+      <workItem from="1741887392547" duration="2627000" />
+      <workItem from="1742158699428" duration="1946000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changed structure">
+      <option name="closed" value="true" />
+      <created>1741888661327</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741888661327</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

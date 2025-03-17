@@ -7,9 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2da7ccf-2c2b-430b-8e24-523b25500845" name="Changes" comment="changed functionality">
-      <change beforePath="$PROJECT_DIR$/js/vendor/recorded-audio.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vendor/testWhisper.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/testWhisper.js" afterDir="false" />
+    <list default="true" id="f2da7ccf-2c2b-430b-8e24-523b25500845" name="Changes" comment="prune unused dependencies">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/testWhisper.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/testWhisper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +146,7 @@
       <workItem from="1741794097305" duration="1236000" />
       <workItem from="1741887392547" duration="2627000" />
       <workItem from="1742158699428" duration="2158000" />
-      <workItem from="1742166916935" duration="2642000" />
+      <workItem from="1742166916935" duration="3249000" />
     </task>
     <task id="LOCAL-00002" summary="changed structure">
       <option name="closed" value="true" />
@@ -196,7 +196,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742178410139</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed functionality of both api calls">
+      <option name="closed" value="true" />
+      <created>1742178452561</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742178452561</updated>
+    </task>
+    <task id="LOCAL-00009" summary="prune unused dependencies">
+      <option name="closed" value="true" />
+      <created>1742178893499</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742178893499</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +233,8 @@
     <MESSAGE value="changed structure" />
     <MESSAGE value="fixed api calls" />
     <MESSAGE value="changed functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed functionality" />
+    <MESSAGE value="fixed functionality of both api calls" />
+    <MESSAGE value="prune unused dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="prune unused dependencies" />
   </component>
 </project>

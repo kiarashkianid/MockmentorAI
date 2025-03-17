@@ -1,7 +1,7 @@
 const fs = require('fs');
 const fetch = require('node-fetch').default; // ✅ Fix import
 const FormData = require('form-data');
-const apiKey = '';
+const apiKey = '';//replace with Key
 const audioFilePath = 'C:\\Users\\kiara\\Downloads\\Recording.wav';
 
 async function transcribeAudio() {

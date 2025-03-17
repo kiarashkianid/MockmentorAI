@@ -11,19 +11,9 @@ The **Tutor Authenticator App** is a platform designed to authenticate tutors' e
   Evaluate and authenticate tutors' abilities for teaching particular subjects.  
 
 - **⚙️ AI-Powered Assessments**  
-  Leverage the **ChatGPT API** and **Voice Recognition API** for interactive and precise assessments.  
+  Leverage the **GPT4 API** and ** Whisper API** for interactive and precise assessments.  
 
 - **🛠️ Technology Stack**  
   Built using a modern tech stack:
-  - **Java** for the backend.
-  - **HTML,CSS,JS** for the frontend.
-  - Integrated with **ChatGPT** and **Voice Recognition APIs** for advanced functionality.
+  - **HTML,CSS,JS**
 
----
-
-## 🚀 Getting Started
-
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/kiarashkianid/MockMentorAI.git
-cd MockMentorAI

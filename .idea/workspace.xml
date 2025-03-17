@@ -8,27 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2da7ccf-2c2b-430b-8e24-523b25500845" name="Changes" comment="changed functionality">
-      <change afterPath="$PROJECT_DIR$/js/testGPT4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/vendor/testWhisper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GDSC Hacks TutorAuthenticator.fig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MockMentorAI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site.webmanifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vendor/testWhisper.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vendor/testWhisper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +145,7 @@
       <workItem from="1741794097305" duration="1236000" />
       <workItem from="1741887392547" duration="2627000" />
       <workItem from="1742158699428" duration="2158000" />
-      <workItem from="1742166916935" duration="2327000" />
+      <workItem from="1742166916935" duration="2614000" />
     </task>
     <task id="LOCAL-00002" summary="changed structure">
       <option name="closed" value="true" />
@@ -190,14 +171,42 @@
       <option name="project" value="LOCAL" />
       <updated>1742160698392</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed functionality">
+      <option name="closed" value="true" />
+      <created>1742178122166</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742178122166</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changed functionality">
+      <option name="closed" value="true" />
+      <created>1742178218607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742178218607</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changed structure" />
+    <MESSAGE value="fixed api calls" />
     <MESSAGE value="changed functionality" />
     <option name="LAST_COMMIT_MESSAGE" value="changed functionality" />
   </component>

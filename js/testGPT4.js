@@ -1,5 +1,5 @@
 async function sendToGPT(question, transcript) {
-  //const apiKey = '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';
+  //const apiKey = '';
   const url = 'https://api.openai.com/v1/chat/completions';
 
   try {
